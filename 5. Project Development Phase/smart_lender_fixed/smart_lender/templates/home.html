@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Lender — Loan Approval Ledger</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <header class="ledger-header">
+    <div class="wrap row">
+      <div class="brand">Smart<span>Lender</span></div>
+      <div class="ledger-meta">Loan Approval Ledger<br>Est. Automated Underwriting</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <p class="eyebrow">Entry 001 — Overview</p>
+      <h1 class="title">A faster read on every loan application, before it reaches the desk.</h1>
+      <p class="lede">Smart Lender weighs income, credit history, and household details the moment an application comes in, so your team spends less time on manual review and more time on borrowers who need a conversation.</p>
+      <a class="btn" href="{{ url_for('predict') }}">Predict a Loan &rarr;</a>
+
+      <div class="ledger-table">
+        <div class="ledger-line">
+          <span class="no">01</span>
+          <div>
+            <div class="label">Applicant Profile</div>
+            <div class="desc">Gender, marital status, dependents, and education on record.</div>
+          </div>
+          <span class="val">4 FIELDS</span>
+        </div>
+        <div class="ledger-line">
+          <span class="no">02</span>
+          <div>
+            <div class="label">Income &amp; Terms</div>
+            <div class="desc">Applicant and co-applicant income, loan amount, and repayment term.</div>
+          </div>
+          <span class="val">4 FIELDS</span>
+        </div>
+        <div class="ledger-line">
+          <span class="no">03</span>
+          <div>
+            <div class="label">Credit Standing</div>
+            <div class="desc">Prior credit history and employment status.</div>
+          </div>
+          <span class="val">2 FIELDS</span>
+        </div>
+        <div class="ledger-line">
+          <span class="no">04</span>
+          <div>
+            <div class="label">Property Area</div>
+            <div class="desc">Rural, semi-urban, or urban location of the secured property.</div>
+          </div>
+          <span class="val">1 FIELD</span>
+        </div>
+        <div class="ledger-line">
+          <span class="no">&rarr;</span>
+          <div>
+            <div class="label">Prediction</div>
+            <div class="desc">A trained model returns an approve / decline read in under a second.</div>
+          </div>
+          <span class="val">INSTANT</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="wrap" style="display:flex; justify-content:space-between; width:100%;">
+      <span>Smart Lender</span>
+      <span>Predictive Underwriting Desk</span>
+    </div>
+  </footer>
+
+</body>
+</html>
